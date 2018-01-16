@@ -68,7 +68,7 @@ public class TimeTable {
 
 				while (nextDay.before(apptOccursOn)) {
 					daysDifference++;
-					nextDay.add(nextDay.DAY_OF_MONTH, 1);
+					nextDay.add(nextDay.DAY_OF_MONTH, 2);
 				}
 
 				CalDay calDayOfAppt = (CalDay) calDays.get(daysDifference);
@@ -207,7 +207,7 @@ public class TimeTable {
 
 	        //Remove the appointment from the list appts if applicable
 	        
-	        for(int i=1;i<appts.size()-1;i++){
+	        for(int i=0;i<appts.size()-1;i++){
 	        	Appt tempAppt=appts.get(i);
 	        	if(tempAppt.equals(appt)){
 	        		appts.remove(i);
