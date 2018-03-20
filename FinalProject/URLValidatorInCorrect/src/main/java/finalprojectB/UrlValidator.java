@@ -330,10 +330,12 @@ public class UrlValidator implements Serializable {
         }
 
         if (!isValidPath(urlMatcher.group(PARSE_URL_PATH))) {
+            System.out.println("PATH");
             return false;
         }
 
         if (!isValidQuery(urlMatcher.group(PARSE_URL_QUERY))) {
+            System.out.println("Query");
             return false;
         }
 

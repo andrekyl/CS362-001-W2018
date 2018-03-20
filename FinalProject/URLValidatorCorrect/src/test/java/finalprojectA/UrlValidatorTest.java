@@ -85,6 +85,12 @@ protected void setUp() {
 	      //UrlValidator urlVal = new UrlValidator(null, allowAllSchemes);
       assertTrue(urlVal.isValid("http://www.google.com"));
       assertTrue(urlVal.isValid("http://www.google.com/"));
+      System.out.println(urlVal.isValid("http://www.google.com:80") +"FINDME");
+      System.out.println(urlVal.isValid("http://www.google.com:81") + " hi"); //True
+      System.out.println(urlVal.isValid("https://") + " Cam"); //True
+
+
+
       int statusPerLine = 60;
       int count = 0;
       int printed = 0;
